@@ -1,7 +1,4 @@
-wypozyczalnia:
-    resource: "@WypozyczalniaBundle/Resources/config/routing.yml"
-    prefix:   /
-
-app:
-    resource: "@AppBundle/Controller/"
+wypozyczalnia_main:
+    resource: "@WypozyczalniaBundle/Controller/"
     type:     annotation
+    prefix:   /
