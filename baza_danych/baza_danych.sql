@@ -38,16 +38,16 @@ car_id int NOT NULL,
 history_text varchar(400) NOT NULL,
 user_id int NOT NULL,
 rate int,
-PRIMARY KEY(review_id),
+PRIMARY KEY(history_id),
 FOREIGN KEY(car_id) references Car (car_id),
 FOREIGN KEY(user_id) references User (user_id)
 );
 
-CREATE TABLE Order (
+CREATE TABLE Car_Order (
 order_id int auto_increment,
 user_id int NOT NULL,
 order_data date NOT NULL,
-order_status int NOT NULL,
+order_status int2 NOT NULL,
 status int,
 PRIMARY KEY(order_id),
 FOREIGN KEY (user_id) references User (user_id)
@@ -59,5 +59,5 @@ order_id int NOT NULL,
 car_id int NOT NULL,
 PRIMARY KEY(order_has_car_id),
 FOREIGN KEY (car_id) references Car (car_id),
-FOREIGN KEY (order_id) references Order (order_id)
+FOREIGN KEY (order_id) references Car_Order (order_id)
 );
