@@ -1,19 +1,20 @@
 <?php
-namespace Bmw\MainBundle\Controller;
+
+namespace WypozyczalniaBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\RedirectResponse;
-//use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
+
 class PaymentController extends Controller
 {
 	public function payAction()
 	{
 		$data = [
-			'id' => 72890,
-			'kwota' => 150.50,
+			'id' => 666,
+			'kwota' => 69,
 			'waluta' => 'PLN',
-			'opis' => 'P3atnooa za wypo?yczenie filmów',
-			'control' => 'WZP0000012',
+			'opis' => 'Platnosc za wypozyczenie samochodu',
+			'control' => 'JB007',
 			'URLC' => 'http://v-ie.uek.krakow.pl/~s168720/app_dev.php/payment/handle',
 			'firstname' => 'Jakub',
 			'nazwisko' => 'Woskowicz'
