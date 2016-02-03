@@ -1,17 +1,16 @@
-
 INSERT INTO `s179647`.`Category`
 (`category_id`,
 `category`)
 VALUES
 ('<{category_id: 1}>',
-'<{category: auta osobowe}>');
+'<{category: osobowe}>');
 
 INSERT INTO `s179647`.`Category`
 (`category_id`,
 `category`)
 VALUES
 ('<{category_id: 2}>',
-'<{category: auta dostawcze}>');
+'<{category: dostawcze}>');
 
 
 INSERT INTO `s179647`.`Category`
@@ -19,8 +18,7 @@ INSERT INTO `s179647`.`Category`
 `category`)
 VALUES
 ('<{category_id: 3}>',
-'<{category: auta ciężarowe}>');
-
+'<{category: ciezarowe}>');
 
 INSERT INTO `s179647`.`Car`
 (`car_id`,
@@ -51,26 +49,9 @@ VALUES
 ('',
 'Volkswagen Polo',
 50,
-' samochód osobowy segmentu aut miejskich produkowany przez koncern Volkswagen od 1975 roku. Nazwa Polo pochodzi od nazwy elitarnej dyscypliny sportu.',
+' Samochód osobowy segmentu aut miejskich produkowany przez koncern Volkswagen od 1975 roku. Nazwa Polo pochodzi od nazwy elitarnej dyscypliny sportu.',
 1,
-'https://pl.wikipedia.org/wiki/Volkswagen_Polo#/media/File:VW_Polo_1.2_Tour_%28IV,_Facelift%29_%E2%80%93_Heckansicht,_4._September_2011,_Heiligenhaus.jpg',
-1);
-
-INSERT INTO `s179647`.`Car`
-(`car_id`,
-`name`,
-`price`,
-`description`,
-`category_id`,
-`img_url`,
-`status`)
-VALUES
-('',
-'Volkswagen Polo',
-50,
-' samochód osobowy segmentu aut miejskich produkowany przez koncern Volkswagen od 1975 roku. Nazwa Polo pochodzi od nazwy elitarnej dyscypliny sportu.',
-1,
-'https://pl.wikipedia.org/wiki/Volkswagen_Polo#/media/File:VW_Polo_1.2_Tour_%28IV,_Facelift%29_%E2%80%93_Heckansicht,_4._September_2011,_Heiligenhaus.jpg',
+'http://www.autocentrum.pl/gfx/modele/volkswagen-polo-v-hatchback-5d-facelifting_l.jpg',
 1);
 
 INSERT INTO `s179647`.`Car`
@@ -154,7 +135,7 @@ VALUES
 ('',
 'Volvo S60 ',
 60,
-' samochód osobowy klasy średniej produkowany przez koncern Volvo Car Corporation jako sedan.',
+' Samochód osobowy klasy średniej produkowany przez koncern Volvo Car Corporation jako sedan.',
 1,
 'https://pl.wikipedia.org/wiki/Volvo_S60#/media/File:Volvo_S60R_Forss.jpg',
 1);
@@ -174,9 +155,9 @@ VALUES
 'Ford Transit  ',
 110,
 ' Samochód dostawczy marki Ford produkowany od 1965 roku występujący w różnych typach nadwozi od dostawczego aż po 17-osobowego busa.',
-1,
+2,
 'https://pl.wikipedia.org/wiki/Ford_Transit#/media/File:NA_Transit_2013.JPG',
-2);
+1);
 
 INSERT INTO `s179647`.`Car`
 (`car_id`,
@@ -191,9 +172,9 @@ VALUES
 'Mercedes-Benz Sprinter',
 100,
 'Mercedes-Benz Sprinter − rodzina ciężkich samochodów dostawczych i lekkich samochodów ciężarowych o DMC do 5 ton produkowanych od 1995 roku.',
-1,
+2,
 'https://pl.wikipedia.org/wiki/Mercedes-Benz_Sprinter#/media/File:Mercedes-Benz_Sprinter_Mixto_216_CDI_%28W_906,_Facelift%29_%E2%80%93_Frontansicht,_8._September_2013,_B%C3%B6sensell.jpg',
-2);
+1);
 
 INSERT INTO `s179647`.`Car`
 (`car_id`,
@@ -208,9 +189,9 @@ VALUES
 'Ford Transit Connect ',
 85,
 'Ford Transit Connect (Ford Tourneo Connect, Ford Transit Courier) – pojazd typu minivan przeznaczony do przewozu osób (Tourneo) oraz jako małe auto dostawcze (Transit) dla małych firm produkowany od 2002 roku.',
-1,
+2,
 'https://pl.wikipedia.org/wiki/Ford_Transit_Connect#/media/File:2013-03-05_Geneva_Motor_Show_8238.JPG',
-2);
+1);
 
 INSERT INTO `s179647`.`Car`
 (`car_id`,
@@ -225,9 +206,9 @@ VALUES
 'Citroen Berlingo ',
 75,
 'Citroen Berlingo – samochód osobowo-dostawczy typu kombivan francuskiej marki Citroën produkowany od 1996 roku we współpracy z Peugeotem.',
-1,
+2,
 'https://pl.wikipedia.org/wiki/Citro%C3%ABn_Berlingo#/media/File:Citro%C3%ABn_Berlingo_Multispace_XTR_%28II,_Facelift%29_%E2%80%93_Frontansicht,_5._September_2012,_Wuppertal.jpg',
-2);
+1);
 
 INSERT INTO `s179647`.`Car`
 (`car_id`,
@@ -242,9 +223,9 @@ VALUES
 'VOLVO FM 9 ',
 200,
 'Volvo FM − gama samochodów ciężarowych produkowanych przez szwedzkie Volvo Truck Corporation.',
-1,
+3,
 'https://pl.wikipedia.org/wiki/Volvo_FM#/media/File:DHL-PN06CNO.jpg',
-3);
+1);
 
 INSERT INTO `s179647`.`Car`
 (`car_id`,
@@ -259,9 +240,9 @@ VALUES
 'Scania 114L ',
 210,
 'Scania serii 4 − to wprowadzony do sprzedaży w 1996 roku następca serii 3. Zdobywczyni tytułu "International Truck of the Year" roku 1996.',
-1,
+3,
 'https://pl.wikipedia.org/wiki/Scania_serii_4#/media/File:Scania_114L-Heisterkamp_%28NL%29-2003.jpg',
-3);
+1);
 
 INSERT INTO `s179647`.`Car`
 (`car_id`,
@@ -276,6 +257,6 @@ VALUES
 'Mercedes-Benz Axor  ',
 210,
 'Mercedes-Benz Actros – samochód ciężarowy produkowany przez firmę Mercedes-Benz od 1996 - seria Mp1 (zdobywca tytułu "International Truck of the Year" 1997), którą produkowano do roku 2003.',
-1,
+3,
 'https://pl.wikipedia.org/wiki/Mercedes-Benz_Actros#/media/File:Actros_MP3.JPG',
-3);
+1);
