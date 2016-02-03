@@ -1,0 +1,33 @@
+{% extends "WypozyczalniaBundle:Layout:layout.html.twig" %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-8">
+                               
+				<ol class="breadcrumb">
+  					<center>Dodaj opinie o samochodzie: {{car.name}}</center>
+				</ol>
+              
+                <div class="row">   
+                               
+                    <div class="col-sm-4 col-lg-12 col-md-8">
+                        <div class="thumbnail">
+                           <img src="{{car.imgUrl}}" width="203" height="301" alt="">
+                        </div>
+                        {% form_theme form 'bootstrap_3_layout.html.twig' %}
+                        {{ form_start(form) }}
+                        {{ form_widget(form) }}
+                        {{ form_end(form) }}
+                       
+                       
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+{% endblock %}

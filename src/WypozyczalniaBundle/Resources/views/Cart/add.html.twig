@@ -1,0 +1,8 @@
+{% extends "WypozyczalnieBundle:Layout:layout.html.twig" %}
+{% block title %}Koszyk{% endblock %}
+{% block content %}
+<center>
+<h1>Dodano samochód do koszyka</h1>
+<h1>Zobacz swoje zamówienie <a href="{{ app.request.uriForPath('/cart') }}">tutaj</a></h1>
+</center>
+{% endblock %}
