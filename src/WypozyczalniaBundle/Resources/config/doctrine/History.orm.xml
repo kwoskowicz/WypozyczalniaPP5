@@ -5,15 +5,15 @@
       <index name="car_id" columns="car_id"/>
       <index name="user_id" columns="user_id"/>
     </indexes>
-    <id name="historyId" type="integer" column="history_id">
+    <id name="historyId" type="bigint" column="history_id">
       <generator strategy="IDENTITY"/>
     </id>
-    <field name="historyText" type="string" column="history_text" length="400" nullable="false">
+    <field name="historyText" type="string" column="history_text" length="700" nullable="false">
       <options>
         <option name="fixed"/>
       </options>
     </field>
-    <field name="rate" type="integer" column="rate" nullable="true">
+    <field name="rate" type="smallint" column="rate" nullable="true">
       <options>
         <option name="unsigned"/>
       </options>
