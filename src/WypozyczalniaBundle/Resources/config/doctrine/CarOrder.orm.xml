@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 <?xml version="1.0" encoding="utf-8"?>
 <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
   <entity name="WypozyczalniaBundle\Entity\CarOrder" table="Car_Order">
@@ -26,32 +25,3 @@
     </many-to-one>
   </entity>
 </doctrine-mapping>
-=======
-<?xml version="1.0" encoding="utf-8"?>
-<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
-  <entity name="WypozyczalniaBundle\Entity\CarOrder" table="Car_Order">
-    <indexes>
-      <index name="user_id" columns="user_id"/>
-    </indexes>
-    <id name="orderId" type="bigint" column="order_id">
-      <generator strategy="IDENTITY"/>
-    </id>
-    <field name="orderData" type="date" column="order_data" nullable="false"/>
-    <field name="orderStatus" type="smallint" column="order_status" nullable="false">
-      <options>
-        <option name="unsigned"/>
-      </options>
-    </field>
-    <field name="status" type="smallint" column="status" nullable="true">
-      <options>
-        <option name="unsigned"/>
-      </options>
-    </field>
-    <many-to-one field="user" target-entity="User" fetch="LAZY">
-      <join-columns>
-        <join-column name="user_id" referenced-column-name="user_id"/>
-      </join-columns>
-    </many-to-one>
-  </entity>
-</doctrine-mapping>
->>>>>>> Stashed changes
