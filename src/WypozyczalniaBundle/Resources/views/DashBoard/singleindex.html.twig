@@ -1,0 +1,50 @@
+{% extends "WypozyczalniaBundle:Layout:layout.html.twig" %}
+{% block title %}{{car.name}}{% endblock %}
+{% block content %}
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-8">
+                                  <div class="panel panel-default ">
+                <div class="panel-heading"> <strong class=""><center>{{car.name}}</center></strong>             
+				</div>
+                <div class="panel-body">
+
+                 {% if app.session.flashBag.has('success') %}
+            <div class="alert alert-success">
+                {% for msg in app.session.flashBag.get('success') %}
+                    {{msg}}
+                {% endfor %}
+            </div>
+        {% endif %}
+                <div class="row">   
+                               
+                    <div class="col-sm-4 col-lg-12 col-md-8">
+                        <div class="thumbnail">
+                            <img src="{{car.imgUrl}}" width="203" height="301" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">{{ car.price}}$</h4>
+                                <h4><a href="#">{{ car.name }}</a>
+                                </h4>
+                                <p>{{car.description}}</p>
+                                {% set login = app.session.get('login') %}
+                                 {% if login %}
+                                  <span class="but_rec"><a href="{{ app.request.uriForPath('/car') }}/{{car.carId}}/review"><button type="button" class="btn btn-info">Dodaj recenzje</button></a></span>
+                                 {% endif %}                            
+                                <a class="btn btn-success" href="{{ app.request.uriForPath('/cart/add') }}/{{car.carId}}">Dodaj do koszyka</a>                                
+                            </div>
+                            <div class="ratings">
+                                                        
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+{% endblock %}
