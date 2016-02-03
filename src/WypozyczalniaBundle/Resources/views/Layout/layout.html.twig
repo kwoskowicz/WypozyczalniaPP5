@@ -33,16 +33,36 @@
         {% include 'WypozyczalniaBundle:Layout:nav.html.twig' %}
     {% endblock %}
 
+	<br />
+	<br />
+	<br />
+	<br />
 
     <!-- Page Content -->
     <div class="container">
 
         <div class="row">
-     
+        <div class="row">
+     		<div class="col-md-3">
+               {% block login %}
+                {% set login = app.session.get('login') %}
+                {% if login %}
+                {% include 'WypozyczalniaBundle:Layout:loguser.html.twig' %}
+                {% else %}
+                {% include 'WypozyczalniaBundle:Layout:login.html.twig' %}
+                {% endif %}
+               {% endblock %}
+               </div>
+                <div class="col-md-9">
+
+                <div class="row carousel-holder">
                 {% block content %}
                 
                 {% endblock %}
-
+			</div>
+			</div>
+        </div>
+		
         </div>
 
     </div>

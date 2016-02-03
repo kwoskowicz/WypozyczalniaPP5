@@ -22,7 +22,7 @@ class DashBoardController extends Controller
 		$category2 = 'Most Ordered';
 		$tag = '';
 		$repository = $this->getDoctrine()->getRepository('WypozyczalniaBundle:Car');		
-		$car = $repository->findByPrice(7);
+		$car = $repository->findByPrice(6.9);
 
 		
 		$value = '';
@@ -81,7 +81,8 @@ class DashBoardController extends Controller
 	 
 
 		return $this->render('WypozyczalniaBundle:DashBoard:index.html.twig', array(
-	    	'car' => $car,
+	    	
+			'car' => $car,
 	    	'category' => $category,
 			'category2' => $category2,
 			'tag' => $tag,
@@ -103,12 +104,12 @@ class DashBoardController extends Controller
 		$tag = '1';
 		if ($type == 'osobowe'){
 			$type = 1;
-			$category = 'Osobowe';
+			$category = 'osobowe';
 			$car = $repository->findBycategory($type);
 		}
 		if($type == 'dostawcze'){
 			$type = 2;
-			$category = 'Dostawcze';
+			$category = 'dostawcze';
 			$car = $repository->findBycategory($type);
 		} if ($type == 'ciezarowe'){
 			$type = 3;
@@ -140,6 +141,7 @@ class DashBoardController extends Controller
 		$car = $repository->findOneBycarId($page);
 		//exit(\Doctrine\Common\Util\Debug::dump($car));
 		return $this->render('WypozyczalniaBundle:DashBoard:index.html.twig', array(
+			
 			'name' => 'Wybrane auto',
 			'car' => $car,
 			'page' => $page

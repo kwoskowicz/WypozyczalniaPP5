@@ -1,5 +1,9 @@
 {% extends "WypozyczalniaBundle:Layout:layout.html.twig" %}
+<<<<<<< Updated upstream
 {% block title %}{{title}}{% endblock %}
+=======
+{% block title %}{{name}}{% endblock %}
+>>>>>>> Stashed changes
 {% block content %}
     <!-- Page Content -->
     <div class="container">
@@ -26,7 +30,11 @@
                             <a href="{{ app.request.uriForPath('/car/') }}{{pop.car_id}}"><img src="{{pop.img_url}}" width="203" height="301" alt=""></a>
                             <div class="caption">
                                 <h4 class="pull-right">{{ pop.price}}$</h4>
+<<<<<<< Updated upstream
                                 <h4><a href="{{ app.request.uriForPath('/car/') }}{{pop.car_id}}">{{ pop.title }}</a>
+=======
+                                <h4><a href="{{ app.request.uriForPath('/car/') }}{{pop.movie_id}}">{{ pop.name }}</a>
+>>>>>>> Stashed changes
                                 </h4>
                                 <p>{{pop.description}}</p>
                             </div>
@@ -59,7 +67,11 @@
                             <a href="{{ app.request.uriForPath('/car/') }}{{pop.car_id}}"><img src="{{pop.img_url}}" width="203" height="301" alt=""></a>
                             <div class="caption">
                                 <h4 class="pull-right">{{ pop.price}}$</h4>
+<<<<<<< Updated upstream
                                 <h4><a href="{{ app.request.uriForPath('/car/') }}{{pop.car_id}}">{{ pop.title }}</a>
+=======
+                                <h4><a href="{{ app.request.uriForPath('/car/') }}{{pop.car_id}}">{{ pop.name }}</a>
+>>>>>>> Stashed changes
                                 </h4>
                                 <p>{{pop.description}}</p>
                             </div>
@@ -86,7 +98,11 @@
                             <a href="{{ app.request.uriForPath('/car/') }}{{pop.carId}}"><img src="{{pop.imgUrl}}" width="203" height="301" alt=""></a>
                             <div class="caption">
                                 <h4 class="pull-right">{{ pop.price}}$</h4>
+<<<<<<< Updated upstream
                                 <h4><a href="{{ app.request.uriForPath('/car/') }}{{pop.carId}}">{{ pop.title }}</a>
+=======
+                                <h4><a href="{{ app.request.uriForPath('/car/') }}{{pop.carId}}">{{ pop.name }}</a>
+>>>>>>> Stashed changes
                                 </h4>
                                 <p>{{pop.description}}</p>
                             </div>

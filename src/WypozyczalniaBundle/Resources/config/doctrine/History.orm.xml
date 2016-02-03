@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <?xml version="1.0" encoding="utf-8"?>
 <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
   <entity name="WypozyczalniaBundle\Entity\History" table="History">
@@ -30,3 +31,37 @@
     </many-to-one>
   </entity>
 </doctrine-mapping>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="WypozyczalniaBundle\Entity\History" table="History">
+    <indexes>
+      <index name="car_id" columns="car_id"/>
+      <index name="user_id" columns="user_id"/>
+    </indexes>
+    <id name="historyId" type="bigint" column="history_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="historyText" type="string" column="history_text" length="700" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="rate" type="smallint" column="rate" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <many-to-one field="user" target-entity="User" fetch="LAZY">
+      <join-columns>
+        <join-column name="user_id" referenced-column-name="user_id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="car" target-entity="Car" fetch="LAZY">
+      <join-columns>
+        <join-column name="car_id" referenced-column-name="car_id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>
+>>>>>>> Stashed changes
