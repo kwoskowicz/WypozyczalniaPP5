@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
-  <entity name="HasOrder" table="Has_Order">
+  <entity name="WypozyczalniaBundle\Entity\Has_Order" table="Has_Order">
     <indexes>
       <index name="car_id" columns="car_id"/>
       <index name="order_id" columns="order_id"/>

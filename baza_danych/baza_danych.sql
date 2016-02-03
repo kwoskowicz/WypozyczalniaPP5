@@ -25,7 +25,6 @@ price int(6) NOT NULL,
 description varchar(256) NOT NULL,
 category_id int,
 img_url varchar(150),
-seats varchar(10),
 status int,
 PRIMARY KEY(car_id),
 FOREIGN KEY (category_id) references Category(category_id)

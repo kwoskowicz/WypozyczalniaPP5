@@ -1,4 +1,4 @@
-﻿
+
 INSERT INTO `s179647`.`Category`
 (`category_id`,
 `category`)
@@ -263,6 +263,7 @@ VALUES
 'https://pl.wikipedia.org/wiki/Scania_serii_4#/media/File:Scania_114L-Heisterkamp_%28NL%29-2003.jpg',
 3);
 
+INSERT INTO `s179647`.`Car`
 (`car_id`,
 `name`,
 `price`,
