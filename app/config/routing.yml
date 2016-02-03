@@ -2,3 +2,45 @@ wypozyczalnia_main:
     resource: "@WypozyczalniaBundle/Controller/"
     type:     annotation
     prefix:   /
+
+car_show:
+    path:   /car/{page}
+    defaults:  { _controller: WypozyczalniaBundle:DashBoard:car }
+
+
+car_select:
+    path:   /cars/{type}
+    defaults:  { _controller: WypozyczalniaBundle:DashBoard:select }
+
+user:
+    path:    /user
+    defaults:  { _controller: WypozyczalniaBundle:User:user }
+
+login:
+    path:   /login
+    defaults: { _controller: WypozyczalniaBundle:Login:login}
+
+logout:
+    path:   /logout
+    defaults: { _controller: WypozyczalniaBundle:Login:logout}
+
+car_review:
+    path: /car/{page}/review/
+    defaults: { _controller: WypozyczalniaBundle:AddReview:addreview }
+
+add_product_to_cart:
+    path: /cart/add/{page}
+    defaults: { _controller: WypozyczalniaBundle:Cart:add}
+
+remove_product_from_cart:
+    path: /cart/remove
+    defaults: { _controller: WypozyczalniaBundle:Cart:remove}
+
+validation_login_to_by_product:
+    path: /cart/valid
+    defaults: { _controller: WypozyczalniaBundle:Cart:valid}
+
+pay_action_controler:
+    path: /payment/handle
+    defaults: { _controller: WypozyczalniaBundle:Payment:pay}   
+    
